@@ -24,5 +24,9 @@
   "bugs": {
     "url": "https://github.com/Mayho/ngGeodist/issues"
   },
-  "homepage": "https://github.com/Mayho/ngGeodist"
+  "homepage": "https://github.com/Mayho/ngGeodist",
+  "dependencies": {
+    "gulp": "^3.8.5",
+    "gulp-concat": "^2.2.0"
+  }
 }
