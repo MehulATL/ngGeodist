@@ -1,7 +1,4 @@
-angular.module('ngGeodist', [
-  ngGeodist.service
-]);
-angular.module('ngGeodist.service', [])
+angular.module('ngGeodist', [])
 
 .factory('ngGeodist', function() {
 
@@ -22,8 +19,8 @@ angular.module('ngGeodist.service', [])
     var coords = [];
     if (Array.isArray(point)) {
       coords = point;
-    } else if ((point.lat !== null) && (point.lon !== null)) {
-      coords = [point.lat, point.lon];
+    } else if ((point.lat !== null) && (point.lng !== null)) {
+      coords = [point.lat, point.lng];
     } else if (typeof point === 'object') {
       for (var key in point) {
         var val = point[key];
@@ -56,24 +53,24 @@ angular.module('ngGeodist.service', [])
 
       var _ref = parseCoordinates(start);
       var lat1 = _ref[0];
-      var lon1 = _ref[1];
+      var lng1 = _ref[1];
       var _ref1 = parseCoordinates(end);
       var lat2 = _ref1[0];
-      var lon2 = _ref1[1];
+      var lng2 = _ref1[1];
       var earthRadius = getEarthRadius('options.unit');
       var latDelta = (lat2 - lat1) * Math.PI / 180;
-      var lonDelta = (lon2 - lon1) * Math.PI / 180;
+      var lngDelta = (lng2 - lng1) * Math.PI / 180;
       var lat1Rad = lat1 * Math.PI / 180;
       var lat2Rad = lat2 * Math.PI / 180;
-      var a = Math.sin(latDelta / 2) * Math.sin(latDelta / 2) + Math.sin(lonDelta / 2) * Math.sin(lonDelta / 2) * Math.cos(lat1Rad) * Math.cos(lat2Rad);
+      var a = Math.sin(latDelta / 2) * Math.sin(latDelta / 2) + Math.sin(lngDelta / 2) * Math.sin(lngDelta / 2) * Math.cos(lat1Rad) * Math.cos(lat2Rad);
       var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
       var distance = earthRadius * c;
 
-      if (!options.exact) {
+      if (options && !options.exact) {
         distance = Math.floor(distance);
       }
 
-      if (options.limit) {
+      if (options && options.limit) {
         if (options.limit > distance) {
           return true;
         } else {
@@ -81,7 +78,7 @@ angular.module('ngGeodist.service', [])
         }
       }
 
-      if (options.format) {
+      if (options && options.format) {
         distance = "" + distance + " " + (options.unit || 'miles');
       }
 
