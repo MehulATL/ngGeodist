@@ -4,7 +4,6 @@ var gulp    = require('gulp'),
 var paths = {
   src: [
     './src/index.js',
-    './src/services/service.js',
   ],
   dist: './dist/'
 };
