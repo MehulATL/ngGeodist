@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "homepage": "https://github.com/Mayho/ngGeodist",
   "authors": [
-    "Mehul Patel <mehul8@gmail.com>"
+    "Mayho"
   ],
   "description": "A simple haversine module for AngularJS",
   "main": "ng-geodist.js",
