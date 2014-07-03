@@ -1,0 +1,28 @@
+{
+  "name": "ngGeodist",
+  "version": "0.0.1",
+  "description": "A simple haversine module for AngularJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Mayho/ngGeodist.git"
+  },
+  "keywords": [
+    "angular",
+    "angularjs",
+    "angular.js",
+    "haversine",
+    "geodistance",
+    "geolocation",
+    "distance"
+  ],
+  "author": "Mehul Patel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Mayho/ngGeodist/issues"
+  },
+  "homepage": "https://github.com/Mayho/ngGeodist"
+}
