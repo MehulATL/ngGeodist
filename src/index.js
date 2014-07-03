@@ -66,11 +66,11 @@ angular.module('ngGeodist', [])
       var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
       var distance = earthRadius * c;
 
-      if (!options.exact) {
+      if (options && !options.exact) {
         distance = Math.floor(distance);
       }
 
-      if (options.limit) {
+      if (options && options.limit) {
         if (options.limit > distance) {
           return true;
         } else {
@@ -78,7 +78,7 @@ angular.module('ngGeodist', [])
         }
       }
 
-      if (options.format) {
+      if (options && options.format) {
         distance = "" + distance + " " + (options.unit || 'miles');
       }
 
