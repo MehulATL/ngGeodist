@@ -2,7 +2,7 @@
   "name": "ngGeodist",
   "version": "0.0.1",
   "description": "A simple haversine module for AngularJS",
-  "main": "index.js",
+  "main": "ng-geodist.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
