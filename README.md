@@ -14,9 +14,10 @@ and the don't forget to include `ng-geodist.js` in your index.html
 
 ###Basic Useage
 `ngGeodist.getDistance(start, end, [options]);`
-[options] = optional params - more info below.
 
-###Example
+[options] = object with key, value pairs - more info below.
+
+####Example
 ```
 angular.module('myApp', [
   'myApp.controllers',
@@ -55,6 +56,8 @@ angular.module('myApp.controllers', [])
 * `format` - Boolean - returns result as a string with the unit type appended to the end. Defaults to false.
 * `exact` - Boolean - returns result as a floating point number. Defaults to false.
 * `limit` - Number - returns true or false if result is less than or equal to the provided limit number.
+
+####Example
 
 ```
 var tokyo = {lat: 35.6833, lon: 139.7667}    
