@@ -57,7 +57,7 @@ angular.module('ngGeodist', [])
       var _ref1 = parseCoordinates(end);
       var lat2 = _ref1[0];
       var lng2 = _ref1[1];
-      var earthRadius = getEarthRadius('options.unit');
+      var earthRadius = getEarthRadius(options.unit);
       var latDelta = (lat2 - lat1) * Math.PI / 180;
       var lngDelta = (lng2 - lng1) * Math.PI / 180;
       var lat1Rad = lat1 * Math.PI / 180;
