@@ -6,7 +6,7 @@
     "Mayho"
   ],
   "description": "A simple haversine module for AngularJS",
-  "main": "ng-geodist.js",
+  "main": "dist/ng-geodist.js",
   "keywords": [
     "angular",
     "angularjs",
